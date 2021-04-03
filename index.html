@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <main>
+    <h1>Weather Dashboard</h1>
+    <div>
+        <div id="city-search">
+            Search for a City: <input type="text" id="searchTerm" value="Search" />
+            <button onclick="weatherAPI()">Search</button>
+        </div>
+    </div>
+    <div>
+        <div id="one-day-forecast"></div>
+        <div id="five-day-forecast">5-Day Forecast</div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    </main>
+</body>
+</html>
