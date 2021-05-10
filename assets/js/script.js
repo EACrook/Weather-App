@@ -2,10 +2,28 @@ function weatherAPI() {
     const city = document.getElementById('searchTerm').value
 
     fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=663fbbeadd446c56388d07f33b9c6bca`
-    )
-        .then(function(locationResponse) {
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=663fbbeadd446c56388d07f33b9c6bca`
+        )
+        .then(function (locationResponse) {
             return locationResponse.json();
+        })
+        .then(function (data) {
+            console.log(data.coord.lon)
+            console.log(data.coord.lat)
+
+            var cityLon = data.coord.lon;
+
+            var cityLat = data.coord.lat;
+
+            return fetch(
+                `https://api.openweathermap.org/data/2.5/onecall?lat=${cityLat}&lon=${cityLon}&exclude=alerts,minutely&appid=663fbbeadd446c56388d07f33b9c6bca`
+            )
+        })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (response) {
+            console.log(response);
         })
     // var searchTerm = document.querySelector("#searchTerm").value;
     // console.log(searchTerm);
