@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
+
 <body>
     <main>
-    <h1>Weather Dashboard</h1>
-    <div>
-        <div id="city-search">
-            Search for a City: <input type="text" id="searchTerm" />
-            <button onclick="weatherAPI()">Search</button>
-        </div>
-        <div id="display-city-search">
-            <ul id="list-city-search">
+        <h1>Weather Dashboard</h1>
+        <div id="city-search-info">
+            <div id="city-search">
+                Search for a City: <input type="text" id="searchTerm" />
+                <button onclick="weatherAPI()">Search</button>
+            </div>
+            <div id="display-city-search">
+                <ul id="list-city-search">
 
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div>
-        <div id="one-day-forecast">Today's Forecast</div>
-        <div id="five-day-forecast">5-Day Forecast</div>
-    </div>
+        <div id="weather-info">
+            <div id="one-day-forecast">
+                <div id="forecast-information"></div>
+            </div>
+            <div id="five-day-forecast">
+                <h2>5-Day Forecast</h2>
+            </div>
+        </div>
 
-    <script src="assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
     </main>
 </body>
+
 </html>
